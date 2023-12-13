@@ -1,0 +1,67 @@
+.cardRegister {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    max-width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 15%;
+}
+
+.cardRegister input[type="text"],
+.cardRegister input[type="email"],
+.cardRegister input[type="password"],
+.cardRegister button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.cardRegister input[type="text"],
+.cardRegister input[type="email"],
+.cardRegister input[type="password"] {
+    width: calc(100% - 20px);
+}
+
+.cardRegister button {
+    background: #ffa500;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.cardRegister button:hover {
+    background: #ff8500;
+}
+
+/* Style pour le lien de connexion */
+.cardRegister a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+    background-color: #ffa500;
+    text-decoration: none;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.cardRegister a:hover {
+    background: #ff8500;
+}
+
+/* Media Queries pour la responsivité */
+@media (max-width: 768px) {
+    .cardRegister input[type="text"],
+    .cardRegister input[type="email"],
+    .cardRegister input[type="password"] {
+        width: 100%;
+    }
+}

@@ -1,0 +1,140 @@
+/* Styles pour les éléments filtrant */
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.cardAuteurs,
+.cardGenre,
+.cardAnnée {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    background: rgba(255, 165, 0, 0.4);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+button {
+    background: #ffa500;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #ff8500;
+}
+.container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+/* Styles pour les éléments des livres filtrés */
+.livresFiltre {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 105, 180, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 20%;
+    margin-right: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.textSection {
+    flex: 1; /* Permet au texte de remplir l'espace restant à droite */
+}
+
+.livresFiltre:hover {
+    transform: translateY(-5px);
+    /* border-radius: 50px; */
+}
+.image:hover {
+    transform: translateY(+5px);
+    border-radius: 30px;
+}
+/* Pour masquer tous les éléments sauf les chiffres cliquables */
+.flex-1
+    *:not([aria-label="Go to page 2"]):not([aria-label="&laquo; Previous"]):not(
+        [aria-label="Next »"]
+    ) {
+    display: none;
+}
+svg path {
+    display: none;
+}
+p.text-sm.text-gray-700.leading-5 {
+    display: none;
+}
+
+/* Couleurs */
+.orange {
+    background-color: #ffa500;
+}
+
+.pink {
+    background-color: #ff69b4;
+}
+
+.blue {
+    background-color: #1e90ff;
+}
+
+/* Media Queries pour la responsivité */
+@media (max-width: 768px) {
+    .cardAuteurs,
+    .cardGenre,
+    .cardAnnée {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .livresFiltre {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    .image {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .textSection {
+        flex: none;
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,73 @@
+.cardLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    max-width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 15%;
+}
+
+.cardLogin input[type="email"],
+.cardLogin input[type="password"],
+.cardLogin button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.cardLogin input[type="email"],
+.cardLogin input[type="password"] {
+    width: calc(100% - 20px);
+}
+
+.cardLogin button {
+    background: #ffa500;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.cardLogin button:hover {
+    background: #ff8500;
+}
+
+/* Style pour le lien d'inscription */
+.cardLogin a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+    background-color: #ffa500;
+    text-decoration: none;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.cardLogin a:hover {
+    background: #ff8500;
+}
+
+/* Style pour les messages d'erreur */
+.alert {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Media Queries pour la responsivité */
+@media (max-width: 768px) {
+    .cardLogin input[type="email"],
+    .cardLogin input[type="password"] {
+        width: 100%;
+    }
+}
